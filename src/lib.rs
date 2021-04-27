@@ -5,8 +5,12 @@ struct Rectangle {
 }
 impl Rectangle {
     fn can_hold (&self, other: &Rectangle) -> bool {
-        self.width<other.width && self.high>other.high
+        self.width>other.width && self.high>other.high
     }
+}
+
+pub fn add_two (a:i32) -> i32 {
+    a+ 2
 }
 
 #[cfg(test)]
@@ -41,6 +45,9 @@ mod tests {
         };
         assert!(!smaller.can_hold(&larger));
     }
-
+    #[test]
+    fn it_adds_two () {
+        assert_eq!(4, add_two(2));
+    }
 
 }
