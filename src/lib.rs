@@ -12,10 +12,12 @@ impl Rectangle {
 pub fn add_two (a:i32) -> i32 {
     a+ 2
 }
-
+//this is for the test to make the assert! panic
 // pub fn greeting (name: &str) -> String {
 //     String::from("Hello !")
 // }
+
+// this the normal one
 pub fn greeting (name: &str) -> String {
     format!("Hello ! {}", name)
 }
